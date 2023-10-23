@@ -1,11 +1,11 @@
 const express = require("express");
 const itemsRoutes = require("./routes/items");
-const ExpressError = require(".'expressError");
+const ExpressError = require("./expressError");
 
 const app = express();
 
 app.use(express.json());
-app.use("/items, itemsRoutes");
+app.use("/items", itemsRoutes);
 
 // 404 handler
 app.use(function(req, res, next) {
